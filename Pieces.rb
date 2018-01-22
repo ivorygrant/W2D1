@@ -1,8 +1,12 @@
+
+
 class Pieces
-  def initialize(color, board, pos)
-    @color = :color
-    @board = Board
-    @pos = []
+  attr_reader :pos, :color
+  attr_writer :pos
+  def initialize(color, pos)
+    @color = color
+    # @board = Board
+    @pos = pos
   end
 
   def to_s
@@ -17,10 +21,6 @@ class Pieces
 
   end
 
-  def pos=(val)
-
-  end
-
   def symbol
 
   end
@@ -31,29 +31,31 @@ class Pieces
 
   end
 end
+
 #-----------------------------------------------
 #-----------------------------------------------
 #-----------------------------------------------
 #-----------------------------------------------
 #-------------Rook/Bishop/Queen--------------------
-module Sideable
-  def horizontal
-    
-  end
-
-  def diagonal
-
-  end
-end
-
-class Rook < Pieces
-
-end
-
-class Bishop < Pieces
-
-end
-
-class Queen < Pieces
-
-end
+# will create a new file for all of these
+# module Sideable
+#   def horizontal
+#
+#   end
+#
+#   def diagonal
+#
+#   end
+# end
+#
+# class Rook < Pieces
+#
+# end
+#
+# class Bishop < Pieces
+#
+# end
+#
+# class Queen < Pieces
+#
+# end
