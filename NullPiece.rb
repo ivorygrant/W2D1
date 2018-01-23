@@ -13,4 +13,5 @@ class NullPiece < Pieces
   def to_s
     @symbol
   end
+
 end
