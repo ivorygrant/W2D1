@@ -1,12 +1,12 @@
 
 
 class Pieces
-  
-  attr_reader :pos, :color
+
+  attr_reader :pos, :color, :board
   attr_writer :pos
-  def initialize(color, pos)
+  def initialize(color, pos, board)
     @color = color
-    # @board = Board
+    @board = board
     @pos = pos
   end
 
@@ -19,23 +19,3 @@ class Pieces
   end
 
 end
-
-#-----------------------------------------------
-#-----------------------------------------------
-#-----------------------------------------------
-#-----------------------------------------------
-#-------------Rook/Bishop/Queen--------------------
-# will create a new file for all of these
-
-#
-# class Rook < Pieces
-#
-# end
-#
-# class Bishop < Pieces
-#
-# end
-#
-# class Queen < Pieces
-#
-# end

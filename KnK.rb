@@ -10,6 +10,10 @@ class Knight < Pieces
     @pos = pos
   end
 
+  def to_s
+    "Kn" # placeholder for now
+  end
+
   def moves
     self.knights_moves
   end
@@ -23,6 +27,10 @@ class King < Pieces
     @color = color
     # @board = Board
     @pos = pos
+  end
+
+  def to_s
+    "K" # placeholder for now
   end
 
   def moves

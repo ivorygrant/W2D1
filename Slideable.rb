@@ -26,14 +26,11 @@ module Slideable
           possible_hv  << start_pos
           moving = false
         elsif self.pos.color == start_pos.color
-          moving = true
           break
         elsif self.pos.color != start_pos.color
           possible_hv  << start_pos
-          moving = true
           break
         else
-          moving = true
           break
         end
       end

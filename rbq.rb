@@ -10,9 +10,14 @@ class Rook < Pieces
     @pos = pos
   end
 
+  def to_s
+    "R" # placeholder for now
+  end
+
   def moves
     self.hori_vertical
   end
+
 end
 
 class Bishop < Pieces
@@ -22,6 +27,10 @@ class Bishop < Pieces
     @color = color
     # @board = Board
     @pos = pos
+  end
+
+  def to_s
+    "B" # placeholder for now
   end
 
   def moves
@@ -37,6 +46,10 @@ class Queen < Pieces
     @color = color
     # @board = Board
     @pos = pos
+  end
+
+  def to_s
+    "Q" # placeholder for now
   end
 
   def moves

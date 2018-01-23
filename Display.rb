@@ -23,9 +23,9 @@ attr_reader :board, :cursor
         if pos == cursor.cursor_pos
           print tile.to_s.colorize({color: :white, background: cursor.color})
         elsif idx1.even? && idx2.even? || idx1.odd? && idx2.odd?
-          print tile.to_s.colorize({color: :white, background: :grey}) #make this green, incorrect
+          print tile.to_s.colorize({color: tile.color, background: :grey}) #make this green, incorrect
         else
-          print tile.to_s.colorize({color: :white, background: :black})
+          print tile.to_s.colorize({color: tile.color, background: :black})
         end
 
       end

@@ -17,11 +17,11 @@ class Board
         if idx <= 1
           # self.[]=([idx,idx2], Pieces.new(:white, [idx,idx2]))
           # self[idx][idx2] = Pieces.new(:white, [idx,idx2])
-          self[[idx,idx2]] = Pieces.new(:white, [idx,idx2])
+          self[[idx,idx2]] = Pieces.new(:black, [idx,idx2])
           # self[idx,idx2] = Pieces.new(:white, [idx,idx2]) #BAD
           # self.[](idx,idx2) = Pieces.new(:white, [idx,idx2]) #BAD
         elsif idx >= 6
-          self[[idx,idx2]] = Pieces.new(:black, [idx,idx2])
+          self[[idx,idx2]] = Pieces.new(:white, [idx,idx2])
         else
           self[[idx,idx2]] = @null_piece
         end
