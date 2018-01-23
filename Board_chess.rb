@@ -15,7 +15,11 @@ class Board
     @grid.each_with_index do |rows,idx|
       rows.each_index do |idx2|
         if idx <= 1
+          # self.[]=([idx,idx2], Pieces.new(:white, [idx,idx2]))
+          # self[idx][idx2] = Pieces.new(:white, [idx,idx2])
           self[[idx,idx2]] = Pieces.new(:white, [idx,idx2])
+          # self[idx,idx2] = Pieces.new(:white, [idx,idx2]) #BAD
+          # self.[](idx,idx2) = Pieces.new(:white, [idx,idx2]) #BAD
         elsif idx >= 6
           self[[idx,idx2]] = Pieces.new(:black, [idx,idx2])
         else
@@ -27,14 +31,20 @@ class Board
   end
 
   def [](pos)
-    row, col = pos
-    grid[row][col]
+    # row, col = pos
+    # grid[row][col]
+    row = pos.first
+    col = pos.last
+    temp = grid[row]
+    temp[col]
   end
 
   #[[1, 2]] = value
 
   def []=(pos, value)
-    row, col = pos
+    # row, col = pos
+    row = pos.first #idx
+    col = pos.last #idx2
     grid[row][col] = value
   end
 
@@ -44,7 +54,12 @@ class Board
     self[start_pos] = @null_piece
   end
 
-  def valid_pos?(pos)
+  def self.valid_pos?(pos) #changed to self from instance
+    # is there another way we can compare it?
+    if pos[0] >= 0 && pos[0] < 8 && pos[1] >= 0 && pos[1] < 8
+      return true
+    end
+    false
   end
 
   def add_piece(piece, pos)

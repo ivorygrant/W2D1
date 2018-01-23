@@ -10,7 +10,7 @@ class Pieces
   end
 
   def to_s
-
+    "P"
   end
 
   def empty?
